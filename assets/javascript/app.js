@@ -112,7 +112,7 @@ $(document).ready(function(){
 				thirdRowTds.eq(2).html('<img src=' + response.data[5].images.fixed_height_still.url + '" alt="' + response.data[5].title + '">"');
 
 				//Creating a new variable to contain the syntax to get the fourth row of the table
-				var secondRowTds = $("table").children().eq(1).children('tr').eq(4).children('td');
+				var fourthRowTds = $("table").children().eq(1).children('tr').eq(4).children('td');
 				//Sets the inner content of each td in the fourth row
 				fourthRowTds.eq(0).html("This gif is rated:" + response.data[3].rating);
 				fourthRowTds.eq(1).html("This gif is rated:" + response.data[4].rating);
@@ -144,23 +144,22 @@ $(document).ready(function(){
 
 		});
 
-	//	
-    
+		//This function allows the user to play and stop the gifs on user's click
+		$("body").on("click", ".allGiphyImages", function() {
+			var src = $(this).attr("src");
 
-
-           
-  
-        
-
-
-
-
-
-
-
-
-
-
-
+			if ($(this).hasClass("play")) {
+				//Stops gif animation
+				$(this).attr("src", src.replace(/\.gif/i, "_s.gif"));
+				$(this).removeClass("play");
+			} 
+			
+			else {
+				//Plays gif animation
+				$(this).addClass("play");
+				$(this).attr("src", src.replace(/\_s.gif/i, ".gif"));
+			}
+				
+		});
 
 });        
