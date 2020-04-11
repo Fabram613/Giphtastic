@@ -115,21 +115,21 @@ $(document).ready(function(){
 				thirdRowTds.eq(2).html('<img src="' + response.data[5].images.fixed_height_still.url + '" alt="' + response.data[5].title + '">');
 
 				//Creating a new variable to contain the syntax to get the fourth row of the table
-				var fourthRowTds = $("table").children().eq(1).children('tr').eq(4).children('td');
+				var fourthRowTds = $("table").children().eq(1).children('tr').eq(3).children('td');
 				//Sets the inner content of each td in the fourth row
 				fourthRowTds.eq(0).html("This gif is rated:" + response.data[3].rating);
 				fourthRowTds.eq(1).html("This gif is rated:" + response.data[4].rating);
 				fourthRowTds.eq(2).html("This gif is rated:" + response.data[5].rating);
 
 				//Creating a new variable to contain the syntax to get the fifth row of the table
-				var fifthRowTds = $("table").children().eq(1).children('tr').eq(2).children('td');
+				var fifthRowTds = $("table").children().eq(1).children('tr').eq(4).children('td');
 				//Sets the inner content of each td in the fifth row
 				fifthRowTds.eq(0).html('<img src="' + response.data[6].images.fixed_height_still.url + '" alt="' + response.data[6].title + '">');
 				fifthRowTds.eq(1).html('<img src="' + response.data[7].images.fixed_height_still.url + '" alt="' + response.data[7].title + '">');
 				fifthRowTds.eq(2).html('<img src="' + response.data[8].images.fixed_height_still.url + '" alt="' + response.data[8].title + '">');
 
 				//Creating a new variable to contain the syntax to get the sixth row of the table
-				var sixthRowTds = $("table").children().eq(1).children('tr').eq(4).children('td');
+				var sixthRowTds = $("table").children().eq(1).children('tr').eq(5).children('td');
 				//Sets the inner content of each td in the sixth row
 				sixthRowTds.eq(0).html("This gif is rated:" + response.data[6].rating);
 				sixthRowTds.eq(1).html("This gif is rated:" + response.data[7].rating);
