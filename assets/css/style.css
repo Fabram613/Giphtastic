@@ -14,12 +14,15 @@ body {
 	font-family: 'Open Sans', sans-serif;
     color: white;
     text-align: center;
+    font-size: 68px;
+    font-weight: 400;
 }
 
 .jumbotron p {
 	font-family: 'Open Sans', sans-serif;
     color: white;
     text-align: center;
+    font-size: 28px;
 }
 
 h4 {
